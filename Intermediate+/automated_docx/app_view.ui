@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="bg_widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#bg_widget{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 193, 234, 255), stop:1 rgba(255, 193, 234, 255));
+}</string>
+     </property>
+     <widget class="QLineEdit" name="number2_line_edit">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>290</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;
+border-width: 0px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;
+padding-left: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submit_button">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>550</y>
+        <width>220</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="cnp_line_edit">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>410</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;
+border-width: 0px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;
+padding-left: 10px;</string>
+      </property>
+      <property name="inputMask">
+       <string>9  999999  999999</string>
+      </property>
+      <property name="cursorMoveStyle">
+       <enum>Qt::VisualMoveStyle</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>270</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numar cerere:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>450</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Data eliberare:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="start_date_picker">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>470</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit{
+	border-width: 0px;
+	border-style: solid;
+	border-radius: 13px;
+	font-size: 20px;
+	color: black;
+	padding-left: 5px;
+}
+QDateEdit::drop-down {
+	image: url(:/drop_down_icon/drop_down.png);
+	width: 26px;
+	height: 26px;
+}
+
+QDateEdit::drop-arrow {
+	image: url(:/drop_down_icon/drop_down.png);
+	width: 26px;
+	height: 26px;
+}</string>
+      </property>
+      <property name="displayFormat">
+       <string>dd.MM.yyyy</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="number1_line_edit">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>230</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;
+border-width: 0px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;
+padding-left: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>210</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numar dispozitie:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>390</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CNP:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="number3_line_edit">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>350</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;
+border-width: 0px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;
+padding-left: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>330</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numar certificat:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>450</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Data dispozitie:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="current_date_picker">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>470</y>
+        <width>141</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit{
+	border-width: 0px;
+	border-style: solid;
+	border-radius: 13px;
+	font-size: 20px;
+	color: black;
+	padding-left: 5px;
+}
+QDateEdit::drop-down {
+	image: url(:/drop_down_icon/drop_down.png);
+	width: 26px;
+	height: 26px;
+}</string>
+      </property>
+      <property name="displayFormat">
+       <string>dd.MM.yyyy</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="add_year_line_edit">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>170</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;
+border-width: 0px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;
+padding-left: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>150</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numar de ani:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>90</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: black;
+font-size: 16px;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nume:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="name_line_edit">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>110</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fff;
+border-width: 0px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;
+padding-left: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="d_radio_button">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>40</y>
+        <width>121</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Determinata</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="p_radio_button">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>40</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Nedeterminata</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_button">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>201</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_name_button">
+      <property name="geometry">
+       <rect>
+        <x>655</x>
+        <y>110</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_add_years_button">
+      <property name="geometry">
+       <rect>
+        <x>655</x>
+        <y>170</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_number1_button">
+      <property name="geometry">
+       <rect>
+        <x>655</x>
+        <y>230</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_number2_button">
+      <property name="geometry">
+       <rect>
+        <x>655</x>
+        <y>290</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_number3_button">
+      <property name="geometry">
+       <rect>
+        <x>655</x>
+        <y>350</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clear_cnp_button">
+      <property name="geometry">
+       <rect>
+        <x>655</x>
+        <y>410</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>d_radio_button</tabstop>
+  <tabstop>p_radio_button</tabstop>
+  <tabstop>name_line_edit</tabstop>
+  <tabstop>add_year_line_edit</tabstop>
+  <tabstop>number1_line_edit</tabstop>
+  <tabstop>number2_line_edit</tabstop>
+  <tabstop>number3_line_edit</tabstop>
+  <tabstop>cnp_line_edit</tabstop>
+  <tabstop>current_date_picker</tabstop>
+  <tabstop>start_date_picker</tabstop>
+  <tabstop>submit_button</tabstop>
+ </tabstops>
+ <resources>
+  <include location="images/drop_down_icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
